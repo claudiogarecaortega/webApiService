@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace WebApiSecretMessage.Models
+{
+    // Models returned by AccountController actions.
+
+    public class ExternalLoginViewModel
+    {
+        public string Name { get; set; }
+
+        public string Url { get; set; }
+
+        public string State { get; set; }
+    }
+
+    public class UserLoginViewModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string IdDevice { get; set; }
+        public string Pin { get; set; }
+    }
+    public class PinViewModel
+    {
+        public string Email { get; set; }
+        public string Pin { get; set; }
+        public string IdDevice { get; set; }
+        public string UserKey { get; set; }
+    }
+    public class UserInformationViewModel
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Pin { get; set; }
+        public string IdDevice { get; set; }
+        public string IdApplication { get; set; }
+        public string UserKey { get; set; }
+    }
+    public class RecoveryViewModel
+    {
+       public string Email { get; set; }
+       
+    }
+    public class ManageInfoViewModel
+    {
+        public string LocalLoginProvider { get; set; }
+
+        public string Email { get; set; }
+
+        public IEnumerable<UserLoginInfoViewModel> Logins { get; set; }
+
+        public IEnumerable<ExternalLoginViewModel> ExternalLoginProviders { get; set; }
+    }
+
+    public class UserInfoViewModel
+    {
+        public string Email { get; set; }
+
+        public bool HasRegistered { get; set; }
+
+        public string LoginProvider { get; set; }
+    }
+
+    public class UserLoginInfoViewModel
+    {
+        public string LoginProvider { get; set; }
+
+        public string ProviderKey { get; set; }
+    }
+}
