@@ -45,6 +45,10 @@ namespace ClientWebApi
             using (var client = new System.Net.Http.HttpClient())
             {
                 client.BaseAddress = new Uri("http://webapisecretmessage.azurewebsites.net//");
+
+
+
+
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
